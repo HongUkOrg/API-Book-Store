@@ -15,8 +15,8 @@ internal enum REQUEST_TYPE {
 class HttpConnection: NSObject {
     
     static let getInstance : HttpConnection = HttpConnection()
-    let getNewImageFromUrlQ = DispatchQueue(label : "_getImageFromUrl_New")
-    let getSearchImageFromUrlQ = DispatchQueue(label : "_getImageFromUrl_Search")
+    let getNewImageFromUrlQ = DispatchQueue(label : "_getImageFromUrl_New", attributes: .concurrent)
+    let getSearchImageFromUrlQ = DispatchQueue(label : "_getImageFromUrl_Search", attributes: .concurrent)
 
 
     func getBookList(type : REQUEST_TYPE, parameter : String = "", completion : @escaping (_ result : Bool, _ responseCode : Int, _ json :[String : Any]?)->()) {

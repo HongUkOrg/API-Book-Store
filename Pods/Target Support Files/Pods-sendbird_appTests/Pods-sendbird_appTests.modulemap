@@ -1,0 +1,6 @@
+framework module Pods_sendbird_appTests {
+  umbrella header "Pods-sendbird_appTests-umbrella.h"
+
+  export *
+  module * { export * }
+}

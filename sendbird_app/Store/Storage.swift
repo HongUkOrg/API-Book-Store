@@ -35,7 +35,7 @@ class Storage: NSObject {
                         self.bookCount = count
                     }
                     
-                    Storage.getInstance.bookList = json["books"] as! [[String : Any]]
+                    Storage.getInstance.bookList = json["books"] as? [[String : Any]]
                     NSLog("Vaild Josn format")
                 }
                 NSLog("get type : \(type(of: json))")

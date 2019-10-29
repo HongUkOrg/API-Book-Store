@@ -3,10 +3,14 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 51;
 	objects = {
 
 /* Begin PBXBuildFile section */
+		03BB50DA23003540188AAB1A /* Pods_sendbird_app.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 9735B47CE4D9D676C3BA0CDA /* Pods_sendbird_app.framework */; };
+		633E48DE2366AD12008ACC21 /* SearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633E48DD2366AD12008ACC21 /* SearchViewModel.swift */; };
+		633E48E12366AD62008ACC21 /* SearchedBook.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633E48E02366AD62008ACC21 /* SearchedBook.swift */; };
+		633E48E32366AD90008ACC21 /* BookModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 633E48E22366AD90008ACC21 /* BookModel.swift */; };
 		638782762320CCE20070052E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638782752320CCE20070052E /* AppDelegate.swift */; };
 		638782782320CCE20070052E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638782772320CCE20070052E /* ViewController.swift */; };
 		6387827B2320CCE20070052E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 638782792320CCE20070052E /* Main.storyboard */; };
@@ -23,6 +27,8 @@
 		638782B92321E33E0070052E /* BookCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638782B82321E33E0070052E /* BookCell.swift */; };
 		638782BB2321E89D0070052E /* DetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638782BA2321E89D0070052E /* DetailViewController.swift */; };
 		638782BD2321EC4F0070052E /* BookPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 638782BC2321EC4F0070052E /* BookPresenter.swift */; };
+		C5469BB3A7365BA3A752479D /* Pods_sendbird_appTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57B57478F44B63CE02FB2B96 /* Pods_sendbird_appTests.framework */; };
+		CE1AFE48D494142CC5A37C00 /* Pods_sendbird_appUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5AB334C8D4B89A01FFE79961 /* Pods_sendbird_appUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -43,6 +49,13 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		15F8A68B7D4F6FDC9B3CCC38 /* Pods-sendbird_appTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sendbird_appTests.debug.xcconfig"; path = "Target Support Files/Pods-sendbird_appTests/Pods-sendbird_appTests.debug.xcconfig"; sourceTree = "<group>"; };
+		3A3DA490EE15A29820B6B7F1 /* Pods-sendbird_app.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sendbird_app.release.xcconfig"; path = "Target Support Files/Pods-sendbird_app/Pods-sendbird_app.release.xcconfig"; sourceTree = "<group>"; };
+		57B57478F44B63CE02FB2B96 /* Pods_sendbird_appTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sendbird_appTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		5AB334C8D4B89A01FFE79961 /* Pods_sendbird_appUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sendbird_appUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		633E48DD2366AD12008ACC21 /* SearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewModel.swift; sourceTree = "<group>"; };
+		633E48E02366AD62008ACC21 /* SearchedBook.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchedBook.swift; sourceTree = "<group>"; };
+		633E48E22366AD90008ACC21 /* BookModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookModel.swift; sourceTree = "<group>"; };
 		638782722320CCE20070052E /* sendbird_app.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = sendbird_app.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		638782752320CCE20070052E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		638782772320CCE20070052E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -65,6 +78,11 @@
 		638782B82321E33E0070052E /* BookCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCell.swift; sourceTree = "<group>"; };
 		638782BA2321E89D0070052E /* DetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailViewController.swift; sourceTree = "<group>"; };
 		638782BC2321EC4F0070052E /* BookPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookPresenter.swift; sourceTree = "<group>"; };
+		9735B47CE4D9D676C3BA0CDA /* Pods_sendbird_app.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_sendbird_app.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C020A6F1084DAA59242CCAED /* Pods-sendbird_appUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sendbird_appUITests.release.xcconfig"; path = "Target Support Files/Pods-sendbird_appUITests/Pods-sendbird_appUITests.release.xcconfig"; sourceTree = "<group>"; };
+		C3B39064B345ECBD2F9D0B88 /* Pods-sendbird_app.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sendbird_app.debug.xcconfig"; path = "Target Support Files/Pods-sendbird_app/Pods-sendbird_app.debug.xcconfig"; sourceTree = "<group>"; };
+		C91E00AA36796CE1E3D11520 /* Pods-sendbird_appTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sendbird_appTests.release.xcconfig"; path = "Target Support Files/Pods-sendbird_appTests/Pods-sendbird_appTests.release.xcconfig"; sourceTree = "<group>"; };
+		CCA6BE7AC22EAD73E11EF1C7 /* Pods-sendbird_appUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-sendbird_appUITests.debug.xcconfig"; path = "Target Support Files/Pods-sendbird_appUITests/Pods-sendbird_appUITests.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,6 +90,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				03BB50DA23003540188AAB1A /* Pods_sendbird_app.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +98,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C5469BB3A7365BA3A752479D /* Pods_sendbird_appTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -86,12 +106,30 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE1AFE48D494142CC5A37C00 /* Pods_sendbird_appUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		633E48DC2366ACA5008ACC21 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				633E48DD2366AD12008ACC21 /* SearchViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		633E48DF2366AD4E008ACC21 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				633E48E02366AD62008ACC21 /* SearchedBook.swift */,
+				633E48E22366AD90008ACC21 /* BookModel.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		638782692320CCE20070052E = {
 			isa = PBXGroup;
 			children = (
@@ -99,6 +137,8 @@
 				638782892320CCE30070052E /* sendbird_appTests */,
 				638782942320CCE30070052E /* sendbird_appUITests */,
 				638782732320CCE20070052E /* Products */,
+				7CEABC39EB88FE48A75E9B64 /* Pods */,
+				BE8566682DAF5BA09855CCB8 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -115,6 +155,8 @@
 		638782742320CCE20070052E /* sendbird_app */ = {
 			isa = PBXGroup;
 			children = (
+				633E48DF2366AD4E008ACC21 /* Model */,
+				633E48DC2366ACA5008ACC21 /* ViewModel */,
 				638782BE232212550070052E /* Presenter */,
 				638782AA2320E2190070052E /* View */,
 				638782A72320E0C20070052E /* Store */,
@@ -184,6 +226,29 @@
 			path = Presenter;
 			sourceTree = "<group>";
 		};
+		7CEABC39EB88FE48A75E9B64 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				C3B39064B345ECBD2F9D0B88 /* Pods-sendbird_app.debug.xcconfig */,
+				3A3DA490EE15A29820B6B7F1 /* Pods-sendbird_app.release.xcconfig */,
+				15F8A68B7D4F6FDC9B3CCC38 /* Pods-sendbird_appTests.debug.xcconfig */,
+				C91E00AA36796CE1E3D11520 /* Pods-sendbird_appTests.release.xcconfig */,
+				CCA6BE7AC22EAD73E11EF1C7 /* Pods-sendbird_appUITests.debug.xcconfig */,
+				C020A6F1084DAA59242CCAED /* Pods-sendbird_appUITests.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		BE8566682DAF5BA09855CCB8 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				9735B47CE4D9D676C3BA0CDA /* Pods_sendbird_app.framework */,
+				57B57478F44B63CE02FB2B96 /* Pods_sendbird_appTests.framework */,
+				5AB334C8D4B89A01FFE79961 /* Pods_sendbird_appUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -191,9 +256,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6387829A2320CCE30070052E /* Build configuration list for PBXNativeTarget "sendbird_app" */;
 			buildPhases = (
+				1BA3BAFB70D6C79295BD0C6D /* [CP] Check Pods Manifest.lock */,
 				6387826E2320CCE20070052E /* Sources */,
 				6387826F2320CCE20070052E /* Frameworks */,
 				638782702320CCE20070052E /* Resources */,
+				F2D2690FE91C24999EFB3709 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -208,6 +275,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 6387829D2320CCE30070052E /* Build configuration list for PBXNativeTarget "sendbird_appTests" */;
 			buildPhases = (
+				EA4A7F5DE63AE3D420754E94 /* [CP] Check Pods Manifest.lock */,
 				638782822320CCE30070052E /* Sources */,
 				638782832320CCE30070052E /* Frameworks */,
 				638782842320CCE30070052E /* Resources */,
@@ -226,6 +294,7 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 638782A02320CCE30070052E /* Build configuration list for PBXNativeTarget "sendbird_appUITests" */;
 			buildPhases = (
+				FFEBD906CA10438F4FD5D1D2 /* [CP] Check Pods Manifest.lock */,
 				6387828D2320CCE30070052E /* Sources */,
 				6387828E2320CCE30070052E /* Frameworks */,
 				6387828F2320CCE30070052E /* Resources */,
@@ -311,15 +380,104 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		1BA3BAFB70D6C79295BD0C6D /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-sendbird_app-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		EA4A7F5DE63AE3D420754E94 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-sendbird_appTests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		F2D2690FE91C24999EFB3709 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-sendbird_app/Pods-sendbird_app-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-sendbird_app/Pods-sendbird_app-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-sendbird_app/Pods-sendbird_app-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		FFEBD906CA10438F4FD5D1D2 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-sendbird_appUITests-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		6387826E2320CCE20070052E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				633E48DE2366AD12008ACC21 /* SearchViewModel.swift in Sources */,
 				638782BB2321E89D0070052E /* DetailViewController.swift in Sources */,
 				638782A52320CF2B0070052E /* HttpConnection.swift in Sources */,
+				633E48E12366AD62008ACC21 /* SearchedBook.swift in Sources */,
 				638782B72321E3060070052E /* SearchViewController.swift in Sources */,
 				638782A92320E0D30070052E /* Storage.swift in Sources */,
+				633E48E32366AD90008ACC21 /* BookModel.swift in Sources */,
 				638782782320CCE20070052E /* ViewController.swift in Sources */,
 				638782BD2321EC4F0070052E /* BookPresenter.swift in Sources */,
 				638782B92321E33E0070052E /* BookCell.swift in Sources */,
@@ -498,6 +656,7 @@
 		};
 		6387829B2320CCE30070052E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C3B39064B345ECBD2F9D0B88 /* Pods-sendbird_app.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -517,6 +676,7 @@
 		};
 		6387829C2320CCE30070052E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3A3DA490EE15A29820B6B7F1 /* Pods-sendbird_app.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
@@ -536,6 +696,7 @@
 		};
 		6387829E2320CCE30070052E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 15F8A68B7D4F6FDC9B3CCC38 /* Pods-sendbird_appTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -557,6 +718,7 @@
 		};
 		6387829F2320CCE30070052E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C91E00AA36796CE1E3D11520 /* Pods-sendbird_appTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -578,6 +740,7 @@
 		};
 		638782A12320CCE30070052E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = CCA6BE7AC22EAD73E11EF1C7 /* Pods-sendbird_appUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;
@@ -598,6 +761,7 @@
 		};
 		638782A22320CCE30070052E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C020A6F1084DAA59242CCAED /* Pods-sendbird_appUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				CODE_SIGN_STYLE = Automatic;

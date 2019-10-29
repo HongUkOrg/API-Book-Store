@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import RxSwift
+import RxCocoa
 
 
 class SearchViewController: UIViewController {
@@ -20,75 +22,78 @@ class SearchViewController: UIViewController {
     private var currentPage : Int = 0
     private var searchKeyword : String = ""
     
+    private var viewModel = SearchViewModel()
+    private var disposeBag = DisposeBag()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        self.tableView.delegate = self
-        self.tableView.dataSource = self
+//        self.tableView.delegate = self
+//        self.tableView.dataSource = self
         self.tableView.rowHeight = 150
-        self.searchBar.delegate = self
         
+        self.setup()
     }
     
-    func getBooksLists(_ keyWord : String) {
-        HttpConnection.getInstance.getBookList(type: REQUEST_TYPE.SEARCH, parameter : keyWord ,completion:  { (_ result, _ responseCode, _ json) in
-            
-            switch responseCode {
-                
-            case 200..<300 :
-                if let json = json, json["books"] is [[String : Any]] {
-                    
-                    if let countString = json["total"] as? String, let count = Int(countString) {
-                        NSLog("sendBird : Total count :: \(count)")
-                        self.searchedBookCount = count
-                    }
-                    if let currentPage = json["page"] as? String, let pageNumber = Int(currentPage) {
-                        self.currentPage = pageNumber
-                    }
-                    
-                    if self.currentPage == 1 {
-                        self.searchedBookLists = json["books"] as? [[String : Any]]
-                    }
-                    else {
-                        self.searchedBookLists! += json["books"] as! [[String:Any]]
-                        
-                    }
-                    
-                    NSLog("sendBird : ( current : total ) -> ( \(self.currentPage) : \(self.searchedBookCount/10 + 1) )")
-                    
-                    if (self.searchedBookCount/10 + 1 ) != self.currentPage {
-                        let newKeyWord = "\(self.searchKeyword)/\(self.currentPage+1)"
-                        self.getBooksLists(newKeyWord)
-                    }
-                    
-                    DispatchQueue.main.async {
-                        self.tableView.rowHeight = 150
-                        if self.currentPage % 2 == 1 {
-                            NSLog("sendBird : Refresh tableView per even number of page")
-                            self.tableView.reloadData()
-                        }
-                    }
-                }
-            default:
-                NSLog("sendBird : ERROR :: failed to connect to network. please check your network state")
-            }
-        })
+    func setup(){
         
+        // searchBar text binding
+        self.searchBar.rx.text.orEmpty
+            .distinctUntilChanged()
+            .throttle(0.5, scheduler: MainScheduler.instance)
+            .subscribe(onNext: { text in
+                self.viewModel.searchTextChanged(text)
+                
+            })
+            .disposed(by: disposeBag)
+        
+        // tableview + data binding
+        self.viewModel.books.bind(to:
+        self.tableView.rx.items){ tableView, row, data in
+            
+            self.viewModel.refereshBook(row)
+            let cell = tableView.dequeueReusableCell(withIdentifier: "BookCell") as! BookCell
+            
+            cell.title.text = data.title
+            cell.isbn.text = data.isbn13
+            cell.price.text = data.price
+            cell.subTitle.text = data.subtitle
+            
+            Observable.just(data.image!)
+                .map{ URL(string: $0) }
+                .filter{ $0 != nil }
+                .map { URLRequest(url: $0!)}
+                .subscribe(onNext: { request in
+                    URLSession.shared.rx.data(request: request)
+                        .map { data in UIImage(data: data) }
+                    .observeOn(MainScheduler.instance)
+                    .subscribe(onNext: { image in
+                        cell.bookImage.image = image
+                        })
+                        .disposed(by: self.disposeBag)
+                })
+                .disposed(by : self.disposeBag)
+            return cell
+        }
+        .disposed(by: disposeBag)
+        
+        
+        // table row selected
+        tableView.rx.itemSelected
+            .asObservable()
+            .subscribe(onNext: { indexPath in
+                let cell = self.tableView.cellForRow(at: indexPath) as! BookCell
+                guard let isbn = cell.isbn.text else {
+                    return
+                }
+                BookPresenter.getInstance.showUpDetailOfBook(isbn : isbn)
+            })
+            .disposed(by: disposeBag)
+                
     }
 }
 
-extension SearchViewController : UISearchBarDelegate {
-    func searchBarSearchButtonClicked(_ searchBar: UISearchBar) {
-        if let keyWord = self.searchBar.text {
-            
-            NSLog("sendBird : now seartching... - \(keyWord)")
-            self.view.endEditing(true)
-            self.searchKeyword = keyWord
-            self.getBooksLists(keyWord)
-        }
-    }
-    
-}
+
 
 extension SearchViewController : UITableViewDelegate {
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
